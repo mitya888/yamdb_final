@@ -13,4 +13,4 @@ RUN pip3 install -r /code/requirements.txt
 # скопировать всё содержимое директории, в которой лежит докерфайл, в директорию /code
 COPY . /code
 
-CMD gunicorn api_yamdb.wsgi:application --bind 0.0.0.0:8000 && bash docker-entrypoint.sh
+CMD gunicorn yamdb_final.wsgi:application --bind 0.0.0.0:8000 && bash docker-entrypoint.sh
