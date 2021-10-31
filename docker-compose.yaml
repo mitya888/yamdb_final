@@ -11,7 +11,6 @@ services:
       - ./.env
   web:
     image: mitya888/yamdb_final
-    build: .
     restart: always
     volumes:
       - static_value:/code/static/
