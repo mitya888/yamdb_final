@@ -1,5 +1,10 @@
 version: '3.3'
 
+volumes:
+  postgres_data:
+  static_value:
+  media_value:
+
 services:
   db:
     image: postgres:12.4
@@ -27,8 +32,3 @@ services:
       - media_value:/var/html/media/
     depends_on:
       - web
-
-volumes:
-  postgres_data:
-  static_value:
-  media_value:
