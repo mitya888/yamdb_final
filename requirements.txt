@@ -29,3 +29,6 @@ zipp==3.1.0               # via importlib-metadata
 gunicorn
 psycopg2-binary==2.8.6
 django-environ==0.8.1
+PyJWT
+djangorestframework-simplejwt
+django-filter==2.4.0
