@@ -1,5 +1,4 @@
 import django_filters.rest_framework
-
 from django.conf import settings
 from django.contrib.auth.tokens import default_token_generator
 from django.db.models.aggregates import Avg
@@ -7,7 +6,9 @@ from django.shortcuts import get_object_or_404
 from rest_framework import filters, status, viewsets
 from rest_framework.decorators import action, api_view, permission_classes
 from rest_framework.permissions import (
-    AllowAny, IsAuthenticated, IsAuthenticatedOrReadOnly,
+    AllowAny,
+    IsAuthenticated,
+    IsAuthenticatedOrReadOnly,
 )
 from rest_framework.response import Response
 from rest_framework_simplejwt.views import TokenViewBase
@@ -15,12 +16,20 @@ from rest_framework_simplejwt.views import TokenViewBase
 from .filters import TitleFilter
 from .models import Category, CustomUser, Genre, Review, Title
 from .permissions import (
-    IsAdmin, IsAdminPermission, IsOwnerOrReadOnly, IsSuperuser,
+    IsAdmin,
+    IsAdminPermission,
+    IsOwnerOrReadOnly,
+    IsSuperuser,
 )
 from .serializers import (
-    CategorySerializer, CommentSerializer,
-    ConfirmationCodeTokenObtainSerializer, GenreSerializer, ReviewSerializer,
-    TitleCreateSerializer, TitleSerializer, UserSerializer,
+    CategorySerializer,
+    CommentSerializer,
+    ConfirmationCodeTokenObtainSerializer,
+    GenreSerializer,
+    ReviewSerializer,
+    TitleCreateSerializer,
+    TitleSerializer,
+    UserSerializer,
 )
 from .viewsets import ListCreateDestroyViewSet
 
